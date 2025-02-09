@@ -23,9 +23,9 @@ void	ft_putstr(char *str)
 	}
 }
 
-int		ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int length;
+	int	length;
 
 	length = 0;
 	while (str[length])
@@ -53,32 +53,32 @@ char	*ft_strndup(char *src, int n)
 	return (dst);
 }
 
-int		is_found(char *str, char *to_find)
+int	is_found(char *str, char *to_find)
 {
-	while(*to_find)
+	while (*to_find)
 	{
-		if(!(*str == *to_find))
+		if (!(*str == *to_find))
 			return (0);
 		str++;
 		to_find++;
 	}
-	return(1);
+	return (1);
 }
 
-int		ft_strstr(char *str, char *to_find)
+int	ft_strstr(char *str, char *to_find)
 {
 	while (*str)
 	{
-		if(is_found(str, to_find))
+		if (is_found(str, to_find))
 			return (1);
 		str++;
 	}
 	return (0);
 }
 
-int		found_in_all_strs(char *to_find, char *str[], int nstr)
+int	found_in_all_strs(char *to_find, char *str[], int nstr)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < nstr)
@@ -96,28 +96,28 @@ char	*find_str_of_len(char *str[], int nstr, char *find, int len)
 	int		end;
 	char	*checkstr;
 	char	*maxstr;
-	
+
 	i = 0;
 	end = ft_strlen(find);
 	if (len > end)
 		return (find);
 	maxstr = "";
-	while ((end - i) >= len) 
+	while ((end - i) >= len)
 	{
 		checkstr = ft_strndup(&find[i], len);
 		if (found_in_all_strs(checkstr, str, nstr))
 		{
 			maxstr = checkstr;
-			checkstr = find_str_of_len(str, nstr, find, len+1);
+			checkstr = find_str_of_len(str, nstr, find, len + 1);
 			if (ft_strlen(checkstr) > 0)
-				return(checkstr);
+				return (checkstr);
 		}
 		i++;
 	}
 	return (maxstr);
 }
 
-int		main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	char	*maxstr;
 
