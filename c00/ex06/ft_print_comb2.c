@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-void	ft_print_nbr(char	*nbr)
+void	ft_print_nbr(char *nbr)
 {
 	write(1, nbr, 5);
 	if (nbr[0] != '9' || nbr[1] != '8')
