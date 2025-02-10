@@ -6,12 +6,25 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 17:04:40 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/10 14:07:11 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/10 19:04:54 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+
+int	is_first_nbr(char *str, int n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (str[i] != '0' + i)
+			return (0);
+		i++;
+	}
+	return (1);
+}
 
 void	fill_nbr(char *str, int pos, int n)
 {
@@ -19,11 +32,11 @@ void	fill_nbr(char *str, int pos, int n)
 
 	if (pos == n)
 	{
+		if (!is_first_nbr(str, n))
+			write(1, ", ", 2);
 		write(1, str, n);
-		write(1, ", ", n);
 		return ;
 	}
-	// printf("%s %c %d %d\n", str, c, pos, n);
 	if (pos == 0)
 		c = '0';
 	else
@@ -38,13 +51,13 @@ void	fill_nbr(char *str, int pos, int n)
 
 void	ft_print_combn(int n)
 {
-	char	res[n];
-	
+	char	res[10];
+
 	fill_nbr(res, 0, n);
 }
 
 int	main(void)
 {
-	ft_print_combn(9);
+	ft_print_combn(5);
 	return (0);
 }
