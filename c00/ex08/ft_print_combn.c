@@ -6,39 +6,45 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 17:04:40 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/09 17:04:40 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/10 14:07:11 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_digit(char start, char end)
+void	fill_nbr(char *str, int pos, int n)
 {
-	char c;
+	char	c;
 
-	c = start;
-	while (c <= end)
+	if (pos == n)
 	{
-		write(1, &c, 1);
-		if (end != '9')
-			ft_print_digit(start + 1, end + 1);
-		write(1, ", ", 1);
+		write(1, str, n);
+		write(1, ", ", n);
+		return ;
+	}
+	// printf("%s %c %d %d\n", str, c, pos, n);
+	if (pos == 0)
+		c = '0';
+	else
+		c = str[pos - 1] + 1;
+	while (c <= '9' - n + pos + 1)
+	{
+		str[pos] = c;
+		fill_nbr(str, pos + 1, n);
 		c++;
 	}
 }
 
 void	ft_print_combn(int n)
 {
-	char start;
-	char end;
-
-	start = '0';
-	end = '9' - n;
-	ft_print_digit(start, end);
+	char	res[n];
+	
+	fill_nbr(res, 0, n);
 }
 
 int	main(void)
 {
-	ft_print_combn(1);
+	ft_print_combn(9);
 	return (0);
 }
