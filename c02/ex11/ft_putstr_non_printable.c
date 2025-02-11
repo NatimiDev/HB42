@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 20:55:42 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/11 15:05:34 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/11 21:03:40 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,10 @@ void	ft_putstr_non_printable(char *str)
 // int	main(void)
 // {
 // 	char nonprintable[] = {
-//         '\xE2', '\xFB', '\xFB', '\x96', '\xBB', '\xF6', '\xF8', '\xD2',
-//         '\xEF', '\x9A', '\xB3', '\xBF', '\xED', 'P',    '\x0B', '\xC2',
-//         '\x98', '\xCF', '\xCF', '\xDF', '\xBB', '\xC2', '\0'
-//     };
+// 		'\xE2', '\xFB', '\xFB', '\x96', '\xBB', '\xF6', '\xF8', '\xD2',
+// 		'\xEF', '\x9A', '\xB3', '\xBF', '\xED', 'P',    '\x0B', '\xC2',
+// 		'\x98', '\xCF', '\xCF', '\xDF', '\xBB', '\xC2', '\0'
+// 	};
 
 // 	ft_putstr_non_printable("Couco ?");
 // 	ft_putchar('\n');
