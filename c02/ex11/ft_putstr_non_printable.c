@@ -6,11 +6,12 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 20:55:42 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/01/23 19:44:17 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/11 15:05:34 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -19,14 +20,14 @@ void	ft_putchar(char c)
 
 int	ft_str_is_printable(char *str)
 {
-	if (!(*str >= 32 && *str <= 126))
-		return (0);
-	return (1);
+	if (*str >= 32 && *str <= 126)
+		return (1);
+	return (0);
 }
 
-char	ft_get_hex_char(int n)
+unsigned char	ft_get_hex_char(int n)
 {
-	char	c;
+	unsigned char	c;
 
 	if (n >= 0 && n <= 9)
 		c = '0' + n;
@@ -35,7 +36,7 @@ char	ft_get_hex_char(int n)
 	return (c);
 }
 
-void	ft_putchar_non_printable(char c)
+void	ft_putchar_non_printable(unsigned char c)
 {
 	char	hex_out[3];
 
@@ -59,7 +60,15 @@ void	ft_putstr_non_printable(char *str)
 
 // int	main(void)
 // {
+// 	char nonprintable[] = {
+//         '\xE2', '\xFB', '\xFB', '\x96', '\xBB', '\xF6', '\xF8', '\xD2',
+//         '\xEF', '\x9A', '\xB3', '\xBF', '\xED', 'P',    '\x0B', '\xC2',
+//         '\x98', '\xCF', '\xCF', '\xDF', '\xBB', '\xC2', '\0'
+//     };
+
 // 	ft_putstr_non_printable("Couco ?");
 // 	ft_putchar('\n');
 // 	ft_putstr_non_printable("Coucou\ntu vas bien ?");
+// 	ft_putchar('\n');
+// 	ft_putstr_non_printable(nonprintable);
 // }
