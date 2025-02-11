@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 17:04:40 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/10 19:04:54 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/11 20:53:42 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ void	ft_print_combn(int n)
 	fill_nbr(res, 0, n);
 }
 
-int	main(void)
-{
-	ft_print_combn(5);
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_print_combn(5);
+// 	return (0);
+// }
