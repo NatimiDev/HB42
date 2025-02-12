@@ -1,0 +1,2 @@
+#detect files with a "42" string at the 42nd byte
+41 string 42 42 file
