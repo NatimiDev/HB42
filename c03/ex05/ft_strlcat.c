@@ -41,10 +41,10 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 // int	main(void)
 // {
-// 	char	dest[13] = "Hello, ";
+// 	char	dest[14] = "Hello, ";
 // 	char	src[] = "World!";
-// 	char	dest1[13] = "Hello, ";
-// 	int		size = 14;
+// 	char	dest1[14] = "Hello, ";
+// 	int		size = 13;
 
 // 	printf("Result: %i\n", ft_strlcat(dest, src, size));
 // 	printf("Result: %s\n", dest);

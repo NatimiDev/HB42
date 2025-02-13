@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: natimi <natimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:45:14 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/01/24 07:29:48 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/13 20:47:12 by natimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,17 @@ int	ft_compare(char *str, char *to_find)
 	return (0);
 }
 
-char *ft_strstr(char *str, char *to_find)
+char	*ft_strstr(char *str, char *to_find)
 {
 	char	*ptr;
 
-	ptr = NULL;
+	if (!*str && ft_compare(str, to_find))
+		return (str);
+	ptr = 0;
 	while (*str)
 	{
 		if (ft_compare(str, to_find))
-			return(str);
+			return (str);
 		str++;
 	}
 	return (ptr);
@@ -43,12 +45,10 @@ char *ft_strstr(char *str, char *to_find)
 
 // int	main(void)
 // {
-// 	char *largestring = "Foo Bar Baz";
-// 	char *smallstring = "Bar";
+// 	char *largestring = "";
+// 	char *smallstring = "";
 // 	char *ptr;
 
 // 	printf("%s\n", strstr(largestring, smallstring));
-// 	printf("%s\n", ft_strstr(largestring, smallstring));
-// 	char *a = NULL;
-// 	printf("%s\n", a);
+// 	printf("%p\n", ft_strstr(largestring, smallstring));
 // }
