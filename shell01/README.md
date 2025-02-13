@@ -1,8 +1,16 @@
-## Important Hints
+## Hint-Hint
 
 - For **exercises 01 and 07**, it is important to subtract the new line using:
   ```sh
   | tr -d '\n'
+  ```
+- To create a file for **exercise 05** use escape characters
+  ```sh
+  | touch \\\?\$\*\'MaRVin\'\*\$\?\\
+  ```
+or simply double quotes
+  ```sh
+  | touch "\?$*'MaRVin'*$?\"
   ```
 - For **exercises 07 and 08**, set the variables `FT_LINE1`, `FT_LINE2`, and `FT_NBR1`, `FT_NBR2` with:
   ```sh
