@@ -5,12 +5,13 @@
   | tr -d '\n'
   ```
 
-  
+
 - For **exercises 07 and 08**, set the variables `FT_LINE1`, `FT_LINE2`, and `FT_NBR1`, `FT_NBR2` with:
   ```sh
 export FT_LINE1=10
 export FT_LINE2=20
-
+  ```
+  ```sh
 export FT_NBR1=\\\'\?\"\\\"\'\\
 export FT_NBR2=rcrdmddd
   ```
