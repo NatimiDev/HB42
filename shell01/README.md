@@ -8,10 +8,11 @@
   ```sh
   | touch \\\?\$\*\'MaRVin\'\*\$\?\\
   ```
-or simply double quotes
+	or simply double quotes
   ```sh
   | touch "\?$*'MaRVin'*$?\"
   ```
+  *(Note: Btw my cat is called Marvin.)*
 - For **exercises 07 and 08**, set the variables `FT_LINE1`, `FT_LINE2`, and `FT_NBR1`, `FT_NBR2` with:
   ```sh
   export FT_LINE1=10
