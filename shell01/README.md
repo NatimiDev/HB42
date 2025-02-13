@@ -7,12 +7,10 @@
 - For **exercises 07 and 08**, set the variables `FT_LINE1`, `FT_LINE2`, and `FT_NBR1`, `FT_NBR2` with:
   ```sh
   export FT_LINE1=10
-  
   export FT_LINE2=20
   
-  export FT_NBR1=30
-  
-  export FT_NBR2=40
+  export FT_NBR1=\\\'\?\"\\\"\'\\
+  export FT_NBR2=rcrdmddd
   ```
   *(Note: You can modify the values, but ensure special characters are properly escaped!)*
 
