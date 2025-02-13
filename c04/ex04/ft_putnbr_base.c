@@ -6,12 +6,11 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 21:13:57 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/13 21:41:09 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/13 23:24:30 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -27,7 +26,8 @@ int	ft_strlen(char *str)
 
 int	has_unvalid_char(char *base)
 {
-	int i;
+	int	i;
+
 	while (*base)
 	{
 		if (*base == '-' || *base == '+')
@@ -44,30 +44,45 @@ int	has_unvalid_char(char *base)
 	return (0);
 }
 
-int	is_valid_base(char *base)
+void	ft_putnbr_base_rec(int nbr, char *base)
 {
-	if (ft_strlen(base) < 2)
+	int	len;
+
+	len = ft_strlen(base);
+	if (nbr < len)
 	{
-		printf("invalid len = %d\n", ft_strlen(base));
-		return (0);
+		write(1, &base[nbr], 1);
+		return ;
 	}
-	if (has_unvalid_char(base))	
-	{
-		printf("has unvalid char\n");
-		return (0);
-	}
-	return (1);
+	ft_putnbr_base_rec(nbr / len, base);
+	write(1, &base[nbr % len], 1);
 }
 
-void ft_putnbr_base(int nbr, char *base)
+void	ft_putnbr_base(int nbr, char *base)
 {
-	if (!is_valid_base(base))
-		write(1,"invalid base", 12);
-	else
-		write(1,"valid base", 10);
+	int	len;
+
+	len = ft_strlen(base);
+	if (len < 2)
+		return ;
+	if (has_unvalid_char(base))
+		return ;
+	if (nbr == -2147483648)
+	{
+		write(1, "-", 1);
+		ft_putnbr_base_rec(-(nbr / len), base);
+		ft_putnbr_base_rec(-(nbr % len), base);
+		return ;
+	}
+	if (nbr < 0)
+	{
+		write(1, "-", 1);
+		nbr = -nbr;
+	}
+	ft_putnbr_base_rec(nbr, base);
 }
 
-int main(void)
-{
-	ft_putnbr_base(10, "lamkdil");
-}
+// int main(void)
+// {
+// 	ft_putnbr_base(-2147483648, "01");
+// }
