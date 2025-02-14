@@ -6,13 +6,13 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 18:07:51 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/01/30 11:10:26 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/14 18:41:48 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int ft_ultimate_range(int **range, int min, int max)
+int	ft_ultimate_range(int **range, int min, int max)
 {
 	int	i;
 

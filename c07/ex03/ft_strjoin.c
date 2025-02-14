@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 11:13:06 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/01/30 13:16:47 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/14 18:43:05 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest_start);
 }
 
-char *ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int i;
-	int total_length;
-	char *result;
+	int		i;
+	int		total_length;
+	char	*result;
 
 	i = 0;
 	total_length = 0;
@@ -56,13 +56,12 @@ char *ft_strjoin(int size, char **strs, char *sep)
 		total_length += ft_strlen(strs[i]);
 		i++;
 	}
-
 	result = malloc(sizeof(char) * total_length);
 	i = 0;
-	while (i<size)
+	while (i < size)
 	{
 		ft_strcat(result, strs[i]);
-		if (i != (size -1))
+		if (i != (size - 1))
 			ft_strcat(result, sep);
 		i++;
 	}

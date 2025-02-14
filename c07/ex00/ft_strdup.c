@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:45:51 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/09 15:44:56 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/14 21:17:11 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ char	*ft_strcpy(char *dest, char *src)
 
 char	*ft_strdup(char *src)
 {
-	char *dst;
+	char	*dst;
 
-	dst = malloc(sizeof(char) * ft_strlen(src));
+	dst = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (dst == NULL)
 		return (NULL);
 	ft_strcpy(dst, src);
