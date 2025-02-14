@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_sqrt_substr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 19:38:30 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/14 18:18:33 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/14 18:19:05 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
 	int	a;
+	int	sqrt;
 
 	if (nb < 0)
 		return (0);
-	a = 0;
-	while (a * a < nb && a < 46341)
+	a = 1;
+	sqrt = 0;
+	while (nb > 0)
 	{
-		a++;
-		if (a * a == nb)
-			return (a);
+		nb -= a;
+		a += 2;
+		sqrt++;
 	}
-	return (0);
+	if (nb == 0)
+		return (sqrt);
+	else
+		return (0);
 }
 
 // #include <stdio.h>
@@ -31,7 +36,7 @@ int	ft_sqrt(int nb)
 // int	main(void)
 // {
 // 	int i = 0;
-// 	while (i <= 20000000)
+// 	while (i <= 2000000)
 // 	{
 // 		ft_sqrt(i);
 // 		i++;

@@ -6,17 +6,16 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 08:50:33 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/01/28 15:27:47 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/14 18:21:56 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_approx_sqrt(int nb)
+int	ft_approx_sqrt(int nb)
 {
-	int a;
+	int	a;
 
 	if (nb < 0)
-		return 0;
+		return (0);
 	a = 0;
 	while (a * a < nb && a < 46341)
 	{
@@ -27,18 +26,19 @@ int ft_approx_sqrt(int nb)
 	return (a);
 }
 
-int ft_is_prime(int nb)
+int	ft_is_prime(int nb)
 {
-	int sqrt;
-	int div;
-	
+	int	sqrt;
+	int	div;
+
 	if (nb <= 1)
 		return (0);
 	if (nb == 2)
 		return (1);
 	sqrt = ft_approx_sqrt(nb);
 	div = 2;
-	while (div <= sqrt) {
+	while (div <= sqrt)
+	{
 		if (nb % div == 0)
 			return (0);
 		div++;
@@ -46,9 +46,9 @@ int ft_is_prime(int nb)
 	return (1);
 }
 
-int ft_find_next_prime(int nb)
+int	ft_find_next_prime(int nb)
 {
-	int find_prime;
+	int	find_prime;
 
 	find_prime = nb;
 	while (!ft_is_prime(find_prime))
@@ -63,5 +63,5 @@ int ft_find_next_prime(int nb)
 // int	main(void)
 // {
 // 	int nb = 10;
-// 	printf("%d is prime %d -> %d\n", nb, ft_is_prime(nb), ft_find_next_prime(nb));
+// 	printf("%d next prime -> %d\n", nb, ft_find_next_prime(nb));
 // }

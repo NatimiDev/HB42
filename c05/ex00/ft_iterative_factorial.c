@@ -6,13 +6,13 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:18:04 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/01/27 13:33:03 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/14 18:17:35 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_iterative_factorial(int nb)
+int	ft_iterative_factorial(int nb)
 {
-	int factorial;
+	int	factorial;
 
 	if (nb < 0)
 		return (0);
