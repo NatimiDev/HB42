@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 15:46:07 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/10 17:08:04 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/14 18:36:26 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_put_str(char *str)
 		write(1, str, 1);
 		str++;
 	}
-	write vfcn   ,  bv                              vcbv(1, "\n", 1);
+	write(1, "\n", 1);
 }
 
 int	main(int argc, char **argv)

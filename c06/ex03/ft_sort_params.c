@@ -6,12 +6,11 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 15:50:29 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/01/28 16:48:38 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/14 18:35:44 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_put_str(char *str)
 {
