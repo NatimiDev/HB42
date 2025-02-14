@@ -1,4 +1,4 @@
-## Hint-Hint
+## 💡 Hint-Hint
 
 - For **exercises 01 and 07**, it is important to subtract the new line using:
   ```sh
