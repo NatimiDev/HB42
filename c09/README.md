@@ -9,10 +9,10 @@ int main(void)
 {
     ft_putstr("Hello, World!");
 }
-``
+```
 
 Then, compile and link the library using:
 
 ```sh
 cc main.c -L. -lft
-``
+```
