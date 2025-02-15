@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 11:13:06 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/14 18:43:05 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/15 17:16:19 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,16 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	char	*result;
 
 	i = 0;
-	total_length = 0;
+	total_length = ft_strlen(sep) * (size - 1);
 	while (i < size)
 	{
 		total_length += ft_strlen(strs[i]);
 		i++;
 	}
-	result = malloc(sizeof(char) * total_length);
+	result = malloc(sizeof(char) * (total_length + 1));
+	if (result == NULL)
+		return (NULL);
+	result[0] = '\0';
 	i = 0;
 	while (i < size)
 	{
@@ -72,10 +75,19 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 // int	main(void)
 // {
+// 	char *a[3];
 // 	char *b[3];
+// 	char *c;
 
-// 	b[0] = "Hello ";
-// 	b[1] = "";
-// 	b[2] = "!";
-// 	printf("%s \n", ft_strjoin(3, b, " "));
+// 	a[0] = "abc ";
+// 	a[1] = "def";
+// 	a[2] = "!";
+// 	b[0] = "";
+// 	b[1] = "ss";
+// 	b[2] = "";
+// 	c = ft_strjoin(3, b, ".");
+// 	printf("%s \n", c);
+// 	free(c);
+// 	c = ft_strjoin(3, a, "...");
+// 	printf("%s \n", c);
 // }
