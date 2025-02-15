@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/30 14:58:22 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/15 17:30:32 by nmikuka          ###   ########.fr       */
+/*   Created: 2025/02/15 17:24:12 by nmikuka           #+#    #+#             */
+/*   Updated: 2025/02/15 17:32:22 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(Value) ((Value >= 0) * Value - (Value < 0) * Value )
+#ifndef FT_POINT_H
+# define FT_POINT_H
+
+typedef struct s_point
+{
+	int	x;
+	int	y;
+}	t_point;
 
 #endif

@@ -6,12 +6,11 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:37:40 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/08 20:09:44 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/15 17:40:00 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "ft_strs_to_tab.h"
-#include <unistd.h>
+#include "ft_stock_str.h"
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
@@ -43,34 +42,34 @@ char	*ft_strcpy(char *dest, char *src)
 
 char	*ft_strdup(char *src)
 {
-	char *dst;
+	char	*dst;
 
-	dst = malloc(sizeof(char) * ft_strlen(src));
+	dst = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (dst == NULL)
 		return (NULL);
 	ft_strcpy(dst, src);
 	return (dst);
 }
 
-struct s_stock_str *ft_strs_to_tab(int ac, char **av)
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	struct s_stock_str *result;
-	int i;
+	struct s_stock_str	*result;
+	int					i;
 
 	i = 0;
 	result = (t_stock_str *)malloc(sizeof(t_stock_str) * (ac + 1));
+	if (result == NULL)
+		return (NULL);
 	while (i < ac)
 	{
 		result[i].size = ft_strlen(av[i]);
 		result[i].str = av[i];
 		result[i].copy = ft_strdup(av[i]);
 		if (result[i].copy == NULL)
-            return (NULL);
+			return (NULL);
 		i++;
 	}
-	result[i].size = 0;
 	result[i].str = NULL;
-	result[i].copy = NULL;
 	return (result);
 }
 

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strs_to_tab.h                                   :+:      :+:    :+:   */
+/*   ft_point.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/03 17:38:03 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/03 17:39:56 by nmikuka          ###   ########.fr       */
+/*   Created: 2025/02/15 17:24:50 by nmikuka           #+#    #+#             */
+/*   Updated: 2025/02/15 17:38:12 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRS_TO_TAB
-# define FT_STRS_TO_TAB
+#include "ft_point.h"
 
-typedef struct s_stock_str
+void	set_point(t_point *point)
 {
-	int size;
-	char *str;
-	char *copy;
-} t_stock_str;
+	point->x = 42;
+	point->y = 21;
+}
 
-#endif
+int	main(void)
+{
+	t_point	point;
+
+	set_point(&point);
+	return (0);
+}

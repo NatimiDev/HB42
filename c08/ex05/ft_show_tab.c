@@ -6,13 +6,12 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:37:40 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/03 18:24:11 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/15 17:28:31 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "ft_strs_to_tab.h"
+#include "ft_stock_str.h"
 #include <unistd.h>
-#include <stdlib.h>
 
 int	ft_strlen(char *str)
 {
@@ -63,9 +62,9 @@ void	ft_putnbr(int nb)
 	}
 }
 
-void ft_show_tab(struct s_stock_str *par)
+void	ft_show_tab(struct s_stock_str *par)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (par[i].str != NULL)
