@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:02:10 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/26 16:27:43 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/26 16:29:16 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,9 @@ t_btree	*btree_create_node(void *item)
 // 	t_btree	*btree;
 // 	void	*item;
 // 	int		a;
-	
+
 // 	a = 10;
 // 	item = &a;
-
 // 	btree = btree_create_node(item);
 // 	if (btree)
 // 	{
