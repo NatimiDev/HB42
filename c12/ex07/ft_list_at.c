@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 20:59:41 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/21 11:04:15 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/26 16:15:28 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ t_list	*ft_list_at(t_list *begin_list, unsigned int nbr)
 // {
 // 	t_list	*res;
 
-// 	res = malloc(sizeof(t_list *));
+// 	res = malloc(sizeof(t_list));
 // 	res->next = NULL;
 // 	res->data = data;
 // 	return (res);

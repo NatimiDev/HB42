@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 18:44:41 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/20 20:49:39 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/26 16:15:06 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	ft_list_clear(t_list *begin_list, void (*free_fct)(void *))
 // {
 // 	t_list	*res;
 
-// 	res = malloc(sizeof(t_list *));
+// 	res = malloc(sizeof(t_list));
 // 	res->next = NULL;
 // 	res->data = data;
 // 	return (res);

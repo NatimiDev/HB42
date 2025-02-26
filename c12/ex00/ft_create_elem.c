@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 10:10:06 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/23 22:24:39 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/26 16:13:24 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_create_elem(void *data)
 {
 	t_list	*res;
 
-	res = malloc(sizeof(t_list *));
+	res = malloc(sizeof(t_list));
 	if (res == NULL)
 		return (NULL);
 	res->next = NULL;

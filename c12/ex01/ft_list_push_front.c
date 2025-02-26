@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 10:25:47 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/20 11:16:37 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/26 16:13:38 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_list_push_front(t_list **begin_list, void *data)
 // {
 // 	t_list	*res;
 
-// 	res = malloc(sizeof(t_list *));
+// 	res = malloc(sizeof(t_list));
 // 	res->next = NULL;
 // 	res->data = data;
 // 	return (res);

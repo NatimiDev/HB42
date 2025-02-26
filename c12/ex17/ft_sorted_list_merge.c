@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:00:07 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/26 10:54:54 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/26 16:17:41 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	ft_sorted_list_merge(t_list **begin_list1, t_list *begin_list2,
 // {
 // 	t_list	*res;
 
-// 	res = malloc(sizeof(t_list *));
+// 	res = malloc(sizeof(t_list));
 // 	res->next = NULL;
 // 	res->data = data;
 // 	return (res);

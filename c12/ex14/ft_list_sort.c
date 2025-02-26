@@ -6,14 +6,14 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:59:31 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/24 17:33:50 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/26 10:38:33 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 #include <stdlib.h>
 
-/**  swap 2 elements, this function swaps elemente swap and swap->next
+/**  swap 2 elements, this function swaps elemente swap and swap->next;
     prev is just a helper structure **/
 void	ft_swap(t_list *prev, t_list *swap)
 {
