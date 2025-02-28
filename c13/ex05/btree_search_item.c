@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 18:01:38 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/26 19:51:45 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:19:51 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	*btree_search_item(t_btree *root, void *data_ref,
 // 	t_btree	*btree;
 
 // 	btree = malloc(sizeof(t_btree));
+//	if (!btree)
+//		return (NULL);
 // 	btree->item = item;
 // 	btree->left = NULL;
 // 	btree->right = NULL;

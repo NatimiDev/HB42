@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:39:05 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/26 16:25:32 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:19:44 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ void	btree_insert_data(t_btree **root, void *item,
 // 	t_btree	*btree;
 
 // 	btree = malloc(sizeof(t_btree));
+//	if (!btree)
+//		return (NULL);
 // 	btree->item = item;
 // 	btree->left = NULL;
 // 	btree->right = NULL;

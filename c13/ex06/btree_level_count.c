@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 19:55:25 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/26 20:36:22 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:19:57 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	btree_level_count(t_btree *root)
 // 	t_btree	*btree;
 
 // 	btree = malloc(sizeof(t_btree));
+//	if (!btree)
+//		return (NULL);
 // 	btree->item = item;
 // 	btree->left = NULL;
 // 	btree->right = NULL;

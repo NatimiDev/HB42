@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:02:10 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/26 16:29:16 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:18:39 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_btree	*btree_create_node(void *item)
 	t_btree	*btree;
 
 	btree = malloc(sizeof(t_btree));
+	if (!btree)
+		return (NULL);
 	btree->item = item;
 	btree->left = NULL;
 	btree->right = NULL;

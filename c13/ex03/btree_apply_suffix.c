@@ -6,7 +6,7 @@
 /*   By: nmikuka <nmikuka@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 17:16:06 by nmikuka           #+#    #+#             */
-/*   Updated: 2025/02/26 17:57:17 by nmikuka          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:19:35 by nmikuka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	btree_apply_suffix(t_btree *root, void (*applyf)(void *))
 // 	t_btree	*btree;
 
 // 	btree = malloc(sizeof(t_btree));
+//	if (!btree)
+//		return (NULL);
 // 	btree->item = item;
 // 	btree->left = NULL;
 // 	btree->right = NULL;
